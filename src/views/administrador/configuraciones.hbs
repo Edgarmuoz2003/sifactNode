@@ -1,0 +1,75 @@
+<section>
+    <div class="container">
+        <div class="row">
+            <div class="col-md-12">
+                <div class="container-fluid contenedor-inicio">
+                    <h2 class="text-center">Datos Almacen</h2>
+                    <form action="/configuraciones" method="post" class="formulario-inicio">
+                        <div class="input-registro">
+                            <div class="input-group">
+                                <span class="input-group-text bi bi-person" id="ID-addon"></span>
+                                <input type="text" id="NIT" name="NIT" class="form-control" placeholder="NIT" required>
+                            </div>
+                        </div>
+                        <div class="input-registro">
+                            <div class="input-group">
+                                <span class="input-group-text bi bi-person-fill" id="NOMBRE-addon"></span>
+                                <input type="text" id="RAZON-SOCIAL" name="RAZON-SOCIAL" class="form-control" placeholder="Razon Social" required>
+                            </div>
+                        </div>
+                        
+                        <div class="input-registro">
+                            <div class="input-group">
+                                <span class="input-group-text bi bi-person" id="USUARIO-addon"></span>
+                                <input type="text" id="DIRECCION" name="DIRECCION" class="form-control" placeholder="Direccion" required>
+                            </div>
+                        </div>
+                        <div class="input-registro">
+                            <div class="input-group">
+                                <span class="input-group-text bi bi-lock" id="password-addon"></span>
+                                <input type="text" id="TELEFONO" name="TELEFONO" class="form-control" placeholder="Telefono " required>
+                            </div>
+                        </div>
+
+                        <H2 class="text-center">Mensajes Finales</H2>
+
+                        <div class="input-registro">
+                            <div class="input-group">
+                                <span class="input-group-text bi bi-lock" id="password-addon"></span>
+                                <input type="text" id="MENSAJE1" name="MENSAJE1" class="form-control" placeholder="Mensaje 1 " >
+                            </div>
+                        </div>
+
+                        <div class="input-registro">
+                            <div class="input-group">
+                                <span class="input-group-text bi bi-lock" id="password-addon"></span>
+                                <input type="text" id="MENSAJE2" name="MENSAJE2" class="form-control" placeholder="Mensaje 2" >
+                            </div>
+                        </div>
+
+                        <div class="input-registro">
+                            <div class="input-group">
+                                <span class="input-group-text bi bi-lock" id="password-addon"></span>
+                                <input type="text" id="MENSAJE3" name="MENSAJE3" class="form-control" placeholder="Mensaje 3 " >
+                            </div>
+                        </div>
+
+
+
+                        <div class="input-registro d-flex justify-content-center">
+                            <button type="submit" class="btn btn-danger">Guardar</button>
+                        </div>
+
+                        {{#if error}}
+                        <p class="text-success text-lg">{{error}}</p>
+                        {{/if}}
+
+                        {{#if mensaje}}
+                        <p class="red">{{mensaje}}</p>
+                        {{/if}}
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>

@@ -1,0 +1,41 @@
+<section>
+    <div class="row">
+        <div class="col-md-12 ">
+            <div class="container-fluid contenedor-inicio" >
+                <h2 class="text-center">Actualizar Cliente</h2>
+                {{#if data}}
+                <form action="/clientes/modificar/{{data.ID}}" method="post" class="formulario-inicio">
+                <div class="input-act">
+                    <label for="ID">Identificación:</label>
+                    <input type="text" id="ID" name="ID" value="{{data.ID}}" disabled>
+                </div>
+                <div class="input-act">
+                    <label for="RAZON-SOCIAL">Razon Social:</label>
+                    <input type="text" id="RAZON-SOCIAL" name="RAZON-SOCIAL" value="{{data.RAZON-SOCIAL}}" required>
+                </div>
+               
+                <div class="input-act">
+                    <label for="DIRECCION">Direccion:</label>
+                    <input type="text" id="DIRECCION" name="DIRECCION" value="{{data.DIRECCION}}" required>
+                </div>
+
+                <div class="input-act">
+                    <label for="TELEFONO">Telefono:</label>
+                    <input type="text" id="TELEFONO" name="TELEFONO" value="{{data.TELEFONO}}" required>
+                </div>
+                
+
+                <div class="boton-inicio">
+                    <button type="submit" class="btn btn-danger">Guardar Cambios</button>
+                </div>
+                
+                </form>
+                {{/if}}
+                {{#if actualizado}}
+                <p class="text-center text-danger">{{actualizado}} </p>
+                {{/if}}
+            </div>
+        </div>
+    </div> 
+
+</section>

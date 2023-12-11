@@ -1,0 +1,43 @@
+<section>
+    <div class="container">
+        <div class="row">
+            <div class="col-md-12">
+                <div class="container-fluid contenedor-inicio">
+                    <h2 class="text-center">Configuraciones facturas</h2>
+                    <form action="/configuraciones/factura" method="post" class="formulario-inicio">
+                        <div class="input-registro">
+                            <div class="input-group">
+                                <label for="rango-inicial">Inicial:</label>
+                                <input type="text" id="rango-inicial" name="rango-inicial" class="form-control" placeholder="Rango Inicial" {{#if data}} value="{{data.rango-inicial}}" {{/if}} required>
+                            </div>
+                        </div>
+                        <div class="input-registro">
+                            <div class="input-group">
+                                <label for="rango-final">Final:</label>
+                                <input type="text" id="rango-final" name="rango-final" class="form-control" placeholder="Rango Final"  {{#if data}} value="{{data.rango-final}}" {{/if}} required>
+                            </div>
+                        </div>
+                        <div class="input-registro">
+                            <div class="input-group">
+                                <label for="siguiente-numero">Siguiente:</label>
+                                <input type="text" id="siguiente-numero" name="siguiente-numero" class="form-control" placeholder="Numero Actual"  {{#if data}} value="{{data.siguiente-numero}}" {{/if}} disabled>
+                            </div>
+                        </div>
+                        
+                        <div class="input-registro d-flex justify-content-center">
+                            <button type="submit" class="btn btn-danger">Guardar</button>
+                        </div>
+
+                        {{#if error}}
+                        <p class="text-success text-lg">{{error}}</p>
+                        {{/if}}
+
+                        {{#if mensaje}}
+                        <p class="red">{{mensaje}}</p>
+                        {{/if}}
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>

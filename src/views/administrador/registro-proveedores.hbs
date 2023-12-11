@@ -1,0 +1,50 @@
+<section>
+    <div class="container">
+        <div class="row">
+            <div class="col-md-12">
+                <div class="container-fluid contenedor-inicio">
+                    <h2 class="text-center">Registrar proveedores</h2>
+                    <form action="/proveedores/registrar" method="post" class="formulario-inicio">
+                        <div class="input-registro">
+                            <div class="input-group">
+                                <span class="input-group-text bi bi-person" id="ID-addon"></span>
+                                <input type="text" id="NIT" name="NIT" class="form-control" placeholder="NIT" required>
+                            </div>
+                        </div>
+                        <div class="input-registro">
+                            <div class="input-group">
+                                <span class="input-group-text bi bi-person-fill" id="NOMBRE-addon"></span>
+                                <input type="text" id="RAZON_SOCIAL" name="RAZON-SOCIAL" class="form-control" placeholder="Razon Social" required>
+                            </div>
+                        </div>
+                        
+                        <div class="input-registro">
+                            <div class="input-group">
+                                <span class="input-group-text bi bi-person" id="USUARIO-addon"></span>
+                                <input type="text" id="DIRECCION" name="DIRECCION" class="form-control" placeholder="Direccion" required>
+                            </div>
+                        </div>
+                        <div class="input-registro">
+                            <div class="input-group">
+                                <span class="input-group-text bi bi-lock" id="password-addon"></span>
+                                <input type="text" id="TELEFONO" name="TELEFONO" class="form-control" placeholder="Telefono " required>
+                            </div>
+                        </div>
+
+                        <div class="input-registro d-flex justify-content-center">
+                            <button type="submit" class="btn btn-danger">Guardar</button>
+                        </div>
+
+                        {{#if error}}
+                        <p class="text-success text-lg">{{error}}</p>
+                        {{/if}}
+
+                        {{#if mensaje}}
+                        <p class="red">{{mensaje}}</p>
+                        {{/if}}
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>

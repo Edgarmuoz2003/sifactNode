@@ -1,0 +1,66 @@
+<section>
+    <div class="container contenedor-buscar shadow-lg">
+        <div class="row">
+            <h2 class="mt-2 text-center">Consultar Productos</h2>
+            <div class="col-6 input-buscar">
+                <form action="/productos/buscar" method="post">
+                    <label for="DESCRIPCION">Descripcion</label>
+                    <input type="text" name="DESCRIPCION" oninput="buscarProducto()" id="descripcionInput" required autocomplete="off">
+                    <div class="mi-boton" >
+                        <button class="btn btn-secondary" >
+                          <i class="bi bi-search"></i> 
+                        </button>
+                    </div>    
+                     {{#if eliminado}} 
+                      <p class="text-center">{{eliminado}} </p>
+                     {{/if}}            
+                </form>
+                {{#if error}}
+                <p class="text-center">{{error}} </p>
+                {{/if}}
+            </div>
+
+            <div class="col-12 tabla-usuarios">
+                <table class="table">
+                    <thead>
+                        <tr>
+                            <th>Codigo</th>
+                            <th>Descripcion</th>
+                            <th>Categoria</th>
+                            <th>Precio de compra</th>
+                            <th>Precio de venta</th>
+                            <th>Existencia</th>
+                            <th>acciones</th>
+                        </tr>                       
+                    </thead>
+                    
+                    <tbody>
+                    {{#if data}}
+                        {{#each data}}
+                            <tr>
+                                <td>{{CODIGO}}</td>
+                                <td>{{DESCRIPCION}}</td>
+                                <td>{{CATEGORIA}}</td>
+                                <td>{{PRECIO-COMPRA}}</td>
+                                <td>{{PRECIO-VENTA}}</td>
+                                <td>{{EXISTENCIA}}</td>
+                                <td>
+                                    <a href="/productos/eliminar/{{CODIGO}}">
+                                        <span class="bi bi-trash"></span>
+                                    </a>
+                                    <a href="/productos/modificar/{{CODIGO}}">
+                                        <span class="bi bi-pencil"></span>
+                                    </a>
+                                </td>
+                            </tr>
+                        {{/each}}
+                    {{/if}}
+                </tbody>
+                </table>
+                {{#if mensaje}}
+                <p class="text-center">{{mensaje}} </p>
+                {{/if}}
+            </div>
+        </div>
+    </div>
+</section>

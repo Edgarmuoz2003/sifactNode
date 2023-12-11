@@ -1,0 +1,41 @@
+<section>
+    <div class="row">
+        <div class="col-md-12 ">
+            <div class="container-fluid contenedor-inicio" >
+                <h2 class="text-center">Actualizar Proveedor</h2>
+                {{#if data}}
+                <form action="/proveedores/modificar/{{data.NIT}}" method="post" class="formulario-inicio">
+                <div class="input-act">
+                    <label for="NIT">NIT:</label>
+                    <input type="text" id="NIT" name="NIT" value="{{data.NIT}}" disabled>
+                </div>
+                <div class="input-act">
+                    <label for="RAZON-SOCIAL">Razon Social:</label>
+                    <input type="text" id="RAZON-SOCIAL" name="RAZON-SOCIAL" value="{{data.RAZON-SOCIAL}}" required>
+                </div>
+               
+                <div class="input-act">
+                    <label for="DIRECCION">Direccion:</label>
+                    <input type="text" id="DIRECCION" name="DIRECCION" value="{{data.DIRECCION}}" required>
+                </div>
+
+                <div class="input-act">
+                    <label for="TELEFONO">Telefono:</label>
+                    <input type="text" id="TELEFONO" name="TELEFONO" value="{{data.TELEFONO}}" required>
+                </div>
+                
+
+                <div class="boton-inicio">
+                    <button type="submit" class="btn btn-danger">Guardar Cambios</button>
+                </div>
+                
+                </form>
+                {{/if}}
+                {{#if actualizado}}
+                <p class="text-center text-danger">{{actualizado}} </p>
+                {{/if}}
+            </div>
+        </div>
+    </div> 
+
+</section>

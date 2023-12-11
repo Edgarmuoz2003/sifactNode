@@ -1,0 +1,57 @@
+<section>
+    <div class="container contenedor-buscar shadow-lg">
+        <div class="row">
+            <h2 class="mt-2 text-center">Consultar Empleados</h2>
+            <div class="col-6 input-buscar">
+                <form action="/consultar" method="post">
+                    <label for="ID">Ingrese Identificación</label>
+                    <input type="text" name="ID" required autocomplete="off">
+                    <div class="mi-boton" >
+                        <button class="btn btn-secondary" >
+                          <i class="bi bi-search"></i> 
+                        </button>
+                    </div>                   
+                </form>
+                {{#if error}}
+                <p class="text-center">{{error}} </p>
+                {{/if}}
+            </div>
+
+            <div class="col-12 tabla-usuarios">
+                <table class="table">
+                    <thead>
+                        <tr>
+                            <th>Identificacion</th>
+                            <th>Nombre</th>
+                            <th>cargo</th>
+                            <th>usuario</th>
+                            <th>Acciones</th>
+                        </tr>                       
+                    </thead>
+                    
+                    <tbody>                                            
+                        {{#if data}}
+                        <tr>
+                            <td>{{data.ID}}</td>
+                            <td>{{data.NOMBRE}}</td>
+                            <td>{{data.CARGO}}</td>
+                            <td>{{data.USUARIO}}</td>
+                            <td>
+                                <a href="/eliminar/{{data.ID}}" >
+                                    <span class="bi bi-trash"></span> <!-- Icono de eliminar -->
+                                </a>
+                                <a href="/modificar/{{data.ID}}" >
+                                    <span class="bi bi-pencil"></span> <!-- Icono de modificar -->
+                                </a>
+                            </td>
+                        </tr>
+                         {{/if}}                        
+                    </tbody>
+                </table>
+                {{#if mensaje}}
+                <p class="text-center">{{mensaje}} </p>
+                {{/if}}
+            </div>
+        </div>
+    </div>
+</section>

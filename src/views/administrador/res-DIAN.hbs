@@ -1,0 +1,43 @@
+<section>
+    <div class="container">
+        <div class="row">
+            <div class="col-md-12">
+                <div class="container-fluid contenedor-inicio">
+                    <h2 class="text-center">Configuraciones Res. DIAN</h2>
+                    <form action="/configuraciones/dian" method="post" class="formulario-inicio">
+                        <div class="input-registro">
+                            <div class="input-group">
+                                <label for="numero-resolucion">Res. DIAN N°:</label>
+                                <input type="num" id="numero-resolucion" name="numero-resolucion" class="form-control" placeholder="Numero de Resolucion" {{#if data}} value="{{data.numero-resolucion}}" {{/if}} required>
+                            </div>
+                        </div>
+                        <div class="input-registro">
+                            <div class="input-group">
+                                <label for="fecha-inicial">Fecha inicial:</label>
+                                <input type="date" id="fecha-inicial" name="fecha-inicial" class="form-control" placeholder="Fecha Inicio"  {{#if data}} value="{{data.fecha-inicial}}" {{/if}} required>
+                            </div>
+                        </div>
+                        <div class="input-registro">
+                            <div class="input-group">
+                                <label for="fecha-final">Fecha Final:</label>
+                                <input type="date" id="fecha-final" name="fecha-final" class="form-control" placeholder="Fecha Final"  {{#if data}} value="{{data.fecha-final}}" {{/if}} required>
+                            </div>
+                        </div>
+                        
+                        <div class="input-registro d-flex justify-content-center">
+                            <button type="submit" class="btn btn-danger">Guardar</button>
+                        </div>
+
+                        {{#if error}}
+                        <p class="text-success text-lg">{{error}}</p>
+                        {{/if}}
+
+                        {{#if mensaje}}
+                        <p class="red">{{mensaje}}</p>
+                        {{/if}}
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>

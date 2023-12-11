@@ -1,0 +1,64 @@
+<section>
+    <div class="container">
+        <div class="row">
+            <div class="col-md-12">
+                <div class="container-fluid contenedor-inicio">
+                    <h2 class="text-center">Registrar Productos</h2>
+                    <form action="/productos/registrar" method="post" class="formulario-inicio">
+                        <div class="input-registro">
+                            <div class="input-group">
+                                <span class="input-group-text bi bi-person" id="ID-addon"></span>
+                                <input type="text" id="CODIGO" name="CODIGO" class="form-control" placeholder="Codigo" required>
+                            </div>
+                        </div>
+                        <div class="input-registro">
+                            <div class="input-group">
+                                <span class="input-group-text bi bi-person-fill" id="NOMBRE-addon"></span>
+                                <input type="text" id="DESCRIPCION" name="DESCRIPCION" class="form-control" placeholder="Descripción" required>
+                            </div>
+                        </div>
+                        
+                        <div class="input-registro">
+                            <div class="input-group">
+                                <span class="input-group-text bi bi-person" id="USUARIO-addon"></span>
+                                <input type="text" id="CATEGORIA" name="CATEGORIA" class="form-control" placeholder="Categoraia" required>
+                            </div>
+                        </div>
+                        <div class="input-registro">
+                            <div class="input-group">
+                                <span class="input-group-text bi bi-lock" id="password-addon"></span>
+                                <input type="text" id="PRECIO-COMPRA" name="PRECIO-COMPRA" class="form-control" placeholder="Precio de Compra " required>
+                            </div>
+                        </div>
+
+                        <div class="input-registro">
+                            <div class="input-group">
+                                <span class="input-group-text bi bi-lock" id="password-addon"></span>
+                                <input type="text" id="PRECIO-VENTA" name="PRECIO-VENTA" class="form-control" placeholder="Precio de Venta " required>
+                            </div>
+                        </div>
+
+                        <div class="input-registro">
+                            <div class="input-group">
+                                <span class="input-group-text bi bi-lock" id="password-addon"></span>
+                                <input type="text" id="EXISTENCIA" name="EXISTENCIA" class="form-control" placeholder="Existencia " required>
+                            </div>
+                        </div>
+
+                        <div class="input-registro d-flex justify-content-center">
+                            <button type="submit" class="btn btn-danger">Guardar</button>
+                        </div>
+
+                        {{#if error}}
+                        <p class="text-success text-lg">{{error}}</p>
+                        {{/if}}
+
+                        {{#if mensaje}}
+                        <p class="red">{{mensaje}}</p>
+                        {{/if}}
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>

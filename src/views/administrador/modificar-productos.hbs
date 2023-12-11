@@ -1,0 +1,51 @@
+<section>
+    <div class="row">
+        <div class="col-md-12 ">
+            <div class="container-fluid contenedor-inicio" >
+                <h2 class="text-center">Actualizar Productos</h2>
+                {{#if data}}
+                <form action="/productos/modificar/{{data.CODIGO}}" method="post" class="formulario-inicio">
+                <div class="input-act">
+                    <label for="CODIGO">Codigo:</label>
+                    <input type="text" id="CODIGO" name="CODIGO" value="{{data.CODIGO}}" disabled>
+                </div>
+                <div class="input-act">
+                    <label for="DESCRIPCION">Descripcion:</label>
+                    <input type="text" id="DESCRIPCION" name="DESCRIPCION" value="{{data.DESCRIPCION}}" required>
+                </div>
+               
+                <div class="input-act">
+                    <label for="CATEGORIA">Categoria:</label>
+                    <input type="text" id="CATEGORIA" name="CATEGORIA" value="{{data.CATEGORIA}}" required>
+                </div>
+
+                <div class="input-act">
+                    <label for="PRECIO-COMPRA">Precio de Compra:</label>
+                    <input type="text" id="PRECIO-COMPRA" name="PRECIO-COMPRA" value="{{data.PRECIO-COMPRA}}" required>
+                </div>
+
+                <div class="input-act">
+                    <label for="PRECIO-VENTA">Precio de venta:</label>
+                    <input type="text" id="PRECIO-VENTA" name="PRECIO-VENTA" value="{{data.PRECIO-VENTA}}" required>
+                </div>
+
+                <div class="input-act">
+                    <label for="EXISTENCIA">Existencia actual:</label>
+                    <input type="text" id="EXISTENCIA" name="EXISTENCIA" value="{{data.EXISTENCIA}}" disabled>
+                </div>
+                
+
+                <div class="boton-inicio">
+                    <button type="submit" class="btn btn-danger">Guardar Cambios</button>
+                </div>
+                
+                </form>
+                {{/if}}
+                {{#if actualizado}}
+                <p class="text-center text-danger">{{actualizado}} </p>
+                {{/if}}
+            </div>
+        </div>
+    </div> 
+
+</section>

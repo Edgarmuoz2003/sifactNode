@@ -1,0 +1,39 @@
+<section class="index-section">
+    <div class="row">
+        <div class="col-12">
+            <div class="container contenedor-inicio" >
+                <h1>Iniciar Sesión</h1>
+                <form action="/login" method="post" class="formulario-inicio">
+                <div class="input-login">
+                    <div class="input-group">
+                        <div class="input-group-prepend">
+                            <span class="input-group-text">
+                                <i class="bi bi-person"></i> <!-- Icono de usuario -->
+                            </span>
+                        </div>
+                        <input type="text" name="ID" class="form-control" placeholder="Identificacion" required>
+                    </div>
+                </div>
+                <div class="input-login">
+                    <div class="input-group">
+                        <div class="input-group-prepend">
+                            <span class="input-group-text">
+                                <i class="bi bi-lock"></i> <!-- Icono de candado -->
+                            </span>
+                        </div>
+                        <input type="password" name="password" class="form-control" placeholder="Contraseña" required>
+                    </div>
+                </div>
+
+                <div class="boton-inicio">
+                    <button type="submit" class="btn btn-danger">Iniciar Sesión</button>
+                </div>
+
+                {{#if error}}
+                <p class="text-white text-center ">{{error}}</p>
+                {{/if}}
+                </form>
+            </div>
+        </div>
+    </div>
+</section>

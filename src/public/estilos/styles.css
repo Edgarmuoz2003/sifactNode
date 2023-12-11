@@ -1,0 +1,308 @@
+/* Estilo generales */
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Layout pricipal (main) */
+.nav-principal  {
+  background: linear-gradient(to right, #ff6a00, #ee0979);
+}
+
+.botones-menu a{
+
+  width: 200px;
+}
+
+.titulo{
+  font-size: 1.8rem;
+  color: white; 
+  font-weight: bolder;
+}
+
+/* Estilos pantalla de inicio (index) */
+ .index-section{
+  width: 100vw;
+  height: 100vh;
+  background-image: url('/imagenes/Fondo-login.jpg');
+}
+
+.contenedor-inicio{
+  width: 400px;
+  height: auto;
+  background-color: rgba(21, 37, 37, 0.315);
+  padding: 3rem;
+  margin-top: 10%;
+  border-radius: 15px;
+  border: 2px inset  rgb(166, 232, 236);
+  box-shadow: 5px 5px 10px 2px rgba(0, 0, 0, 0.5);
+  
+}
+
+h1{
+  color: white;
+  font-size: 2rem;
+  font-weight: bold;
+  text-align: center;
+  margin-bottom: 40px;
+}
+
+.input-login {
+  display: flex;
+  align-items: center;
+  margin: 20px; 
+}
+
+.input-login:hover {
+  scale: 1.2;
+  box-shadow: 5px 5px 10px 2px rgba(0, 0, 0, 0.5);
+  transition: all 1s;
+}
+
+.boton-inicio{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  margin-top: 5vh; 
+}
+
+.boton-inicio button{
+  width: 200px;
+  padding: 15px;
+  font-size: 1.2rem;
+  font-weight: bold;
+  color: white;
+}
+
+/* pantalla inicial del administrador */
+
+.menu{
+  padding: 40px;
+}
+
+.menu a img{
+  height: 100%;
+  width: 100%;
+  padding: 10px;
+  border-radius: 10px;
+  display: block;
+  transition: all 0.2s ease;
+}
+
+.menu-opciones{
+  max-width: 300px;
+}
+
+
+.overlay{
+  transition: all 0.2s ease;
+  opacity: 0;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+}
+
+.overlay p{
+  font-size: 25px;
+  font-weight: bold;
+  margin-bottom: 0;
+  color: blue;
+}
+
+.menu-opciones{
+  position: relative;
+}
+
+.menu-opciones:hover img{
+  opacity: 0.2;
+}
+
+.menu-opciones:hover .overlay{
+  opacity: 1;
+}
+
+.contenedor {
+  max-width: none; 
+  padding: 0; 
+  margin: 0; 
+}
+
+.parte1{
+  height: 100vh;
+  background-color:  #35322f;
+}
+
+.parte2{
+  height: 100vh;
+  background-color: white
+}
+
+.avatar-admin img{
+  width: 90%;
+  height: 90%;
+  margin: 20px;
+  padding: 20px 5px 10px 5px;
+  border-radius: 50%;
+}
+
+.cargo-perfil{
+  color: white
+}
+
+.name-perfil{
+  color: white;
+  font-size: 1.4rem;
+}
+
+hr {
+  border: 2px solid white; 
+  margin: 10px 0; 
+}
+
+.desplegable a{
+  width: 100%;
+}
+
+
+/* Gestion de usuarios */
+
+.contenedor-buscar{
+  margin-top: 10vh;
+  background-color: rgb(166, 232, 236);
+  border-radius: 10px;
+}
+
+label {
+  flex: 1; 
+  margin-right: 10px; 
+}
+
+input, select {
+  flex: 2;
+  padding: 10px; 
+  margin: 20px 20px 20px 0;
+}
+
+span{
+  margin: 20px 20px 20px 0;
+}
+
+li p{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    font-size: 2rem;
+    color: blue;
+    margin-right: 40vw;
+  }
+
+
+
+  li a p{
+    color: blue;
+    margin-right: 20vw;
+    
+  }
+
+  .contenedor-botones{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin-top: 10vh;
+  }
+
+  .contenedor-botones a{
+    width: 100%;
+    padding: 1rem;
+    margin: 2rem;
+    font-weight: bold;
+  }
+
+  .tabla-usuarios{
+    padding: 10px;
+  }
+  .input-buscar{
+    display: inline-block;
+    margin: 0 auto;
+    padding: 20px;
+    
+  }
+
+
+  .mi-boton{
+    display: inline;
+    
+  }
+
+ /* Borde 3D para resaltar las secciones */
+.mb-2,
+.mb-3,
+.totals-section {
+  border: 1px solid #ddd;
+  padding: 10px;
+  border-radius: 5px;
+  margin-bottom: 15px;
+}
+
+/* Estilo para el fondo del total */
+.total-section {
+  background-color: black;
+  color: yellow;
+  padding: 10px;
+  border-radius: 5px;
+  margin-top: 15px;
+}
+
+/* Cambia el color del texto de los campos deshabilitados */
+[disabled] {
+  color: #495057;
+}
+
+/* Ajusta el estilo del botón Agregar en la sección de productos */
+.btn-success,
+.btn-danger {
+  width: auto; /* Ancho automático para el tamaño normal de un botón */
+  height: auto; /* Altura automática para el tamaño normal de un botón */
+  border-radius: 5px; /* Bordes redondeados */
+  font-size: 14px;
+}
+
+/* Ajustes adicionales */
+.modal-content {
+  border-radius: 10px;
+}
+
+/* Ajustes para campos de productos */
+.product-fields {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+/* Ajustes para la sección de totales */
+.totals-section {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+}
+
+.input-group {
+  display: flex;
+  align-items: center;
+  margin-bottom: 3px; /* Ajusta el espacio entre grupos de etiquetas y campos de entrada */
+}
+
+.input-group label {
+  margin-right: 10px; /* Espacio entre etiquetas y campos de entrada */
+}
+
+.input-group input {
+  width: 150px; /* Ajusta el ancho según sea necesario */
+}

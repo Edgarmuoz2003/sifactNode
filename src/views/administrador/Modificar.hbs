@@ -1,0 +1,41 @@
+<section>
+    <div class="row">
+        <div class="col-md-12 ">
+            <div class="container-fluid contenedor-inicio" >
+                <h2 class="text-center">Actualizar Usuarios</h2>
+                {{#if data}}
+                <form action="/modificar/{{data.ID}}" method="post" class="formulario-inicio">
+                <div class="input-act">
+                    <label for="ID">Identificación:</label>
+                    <input type="text" id="ID" name="ID" value="{{data.ID}}" disabled>
+                </div>
+                <div class="input-act">
+                    <label for="NOMBRE">Nombre Completo:</label>
+                    <input type="text" id="NOMBRE" name="NOMBRE" value="{{data.NOMBRE}}" required>
+                </div>
+                <div class="input-act">
+                    <select id="CARGO" name="CARGO" required>
+                        <option value="" disabled selected>Seleccione un cargo</option>
+                        <option value="administrador" >Administrador</option>
+                        <option value="vendedor" >Vendedor</option>
+                        <option value="cajero" >Cajero</option>
+                        <option value="inventarios" >Inventarios</option>
+                    </select>
+                </div>
+                <div class="input-act">
+                    <label for="USUARIO">Nombre de usuario:</label>
+                    <input type="text" id="USUARIO" name="USUARIO" value="{{data.USUARIO}}" required>
+                </div>
+                
+
+                <div class="boton-inicio">
+                    <button type="submit" class="btn btn-danger">Guardar Cambios</button>
+                </div>
+                
+                </form>
+                {{/if}}
+            </div>
+        </div>
+    </div> 
+
+</section>

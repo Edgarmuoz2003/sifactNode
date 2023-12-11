@@ -1,0 +1,60 @@
+<section>
+    <div class="container contenedor-buscar shadow-lg">
+        <div class="row">
+            <h2 class="mt-2 text-center">Consultar proveedores</h2>
+            <div class="col-6 input-buscar">
+                <form action="/proveedores" method="post">
+                    <label for="ID">Ingrese NIT</label>
+                    <input type="text" name="NIT" required autocomplete="off">
+                    <div class="mi-boton" >
+                        <button class="btn btn-secondary" >
+                          <i class="bi bi-search"></i> 
+                        </button>
+                    </div>    
+                     {{#if eliminado}} 
+                      <p class="text-center">{{eliminado}} </p>
+                     {{/if}}            
+                </form>
+                {{#if error}}
+                <p class="text-center">{{error}} </p>
+                {{/if}}
+            </div>
+
+            <div class="col-12 tabla-usuarios">
+                <table class="table">
+                    <thead>
+                        <tr>
+                            <th>Nit</th>
+                            <th>Razon Social</th>
+                            <th>Direccion</th>
+                            <th>Telefono</th>
+                            <th>acciones</th>
+                        </tr>                       
+                    </thead>
+                    
+                    <tbody>                                            
+                        {{#if data}}
+                        <tr>
+                            <td>{{data.NIT}}</td>
+                            <td>{{data.RAZON-SOCIAL}}</td>
+                            <td>{{data.DIRECCION}}</td>
+                            <td>{{data.TELEFONO}}</td>
+                            <td>
+                                <a href="/proveedores/eliminar/{{data.NIT}}" >
+                                    <span class="bi bi-trash"></span> <!-- Icono de eliminar -->
+                                </a>
+                                <a href="/proveedores/modificar/{{data.NIT}}" >
+                                    <span class="bi bi-pencil"></span> <!-- Icono de modificar -->
+                                </a>
+                            </td>
+                        </tr>
+                         {{/if}}                        
+                    </tbody>
+                </table>
+                {{#if mensaje}}
+                <p class="text-center">{{mensaje}} </p>
+                {{/if}}
+            </div>
+        </div>
+    </div>
+</section>
